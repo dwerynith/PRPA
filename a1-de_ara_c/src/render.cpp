@@ -101,7 +101,8 @@ void render(std::byte* buffer,
             for (int i = 0; i <= it; ++i)
                 h += (float)histo[i]/(float)total;
 
-            if (h < 1.) {
+            if (h < 1.)
+            {
                 lineptr[x] = heat_lut(h);
             } 
             else 
@@ -173,7 +174,8 @@ void render_mt(std::byte* buffer,
             for (int i = 0; i <= it; ++i)
                 h += (float)histo[i]/(float)total;
 
-            if (h < 1.) {
+            if (h < 1.)
+            {
                 lineptr[x] = heat_lut(h);
             } 
             else 
