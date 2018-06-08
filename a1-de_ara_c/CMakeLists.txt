@@ -18,7 +18,7 @@ add_library(renderer src/render.hpp src/render.cpp)
 add_executable(view src/view.cpp)
 target_include_directories(view PRIVATE ${SDL2_INCLUDE_DIRS})
 target_link_libraries(view renderer ${SDL2_LIBRARIES} Threads::Threads)
-#target_link_libraries(renderer tbb)
+target_link_libraries(renderer tbb)
 
 add_executable(bench src/bench.cpp)
 target_link_libraries(bench renderer benchmark::benchmark)
